@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="javascript/three.min.js"></script>
+<script src="javascript/vanta.waves.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.min.css">
+
+</head>
+<body style="width: 100%;">
+    
+    <div id="waves">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="#">
+                <img src="assets/1cd010_aa9194ae5bbe438c870231081b654f02_mv2.png" width="60" height=auto alt="">
+              </a>            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="" style="color: white; font-size: 20px;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./three/examples/webgl_loader_gltf.html" style="color: white; font-size: 20px;">Rover</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./html/Team" style="color: white; font-size: 20px;">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/Sponsors" style="color: white; font-size: 20px;">Sponsors</a>
+                  </li>
+                  
+              </ul>
+
+            </div>
+          </nav>
+
+        <h1 class="centerFrontHeader">Avalon ROV</h1>
+        <h4 class="centerFrontSub">The University of Sheffield</h4>
+
+        
+    </div>
+    <div class="belowWaves">
+        <div style="width: 50%;margin-left: 25%;margin-top: 30px;box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);">
+            <div class="jumbotron">
+                <h1 class="display-4">About us</h1>
+                <p class="lead">We are AVALON ROV Team</p>
+                <hr class="my-4">
+                <p>We are enthusiastic and highly creative engineering students at the University of Sheffield, with a unique passion for UNDERWATER ROBOTICS. Our story began in 2017 when we became the first UK university team to participate in the international underwater robotics competition "MATE ROV" in the USA. </p>
+                <a class="btn btn-primary btn-lg" href="https://www.facebook.com/AvalonROV/" role="button">Learn more</a>
+              </div>
+            </div>
+
+
+
+            <div class="footer">
+                <div class="container containerF">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <img src="assets/1cd010_aa9194ae5bbe438c870231081b654f02_mv2.png" width="60" height=auto alt=""><p class="logoText">Avalon ROV</p><br />
+                        <p style="color: white; margin-top: 10px;">A University of Sheffield Project</p>
+                        <p style="color: lightgray; margin-top: 10px;font-size: 12px;">Avalon ROV © 2020</p>
+
+
+                      </div>
+                      <div class="col-sm-5" >
+                        <div class="infoBlock">  
+                            <a href="https://goo.gl/maps/rgLTacfVwRXqoPPA9"><i class="fas fa-map-marker-alt fa-lg"></i></a><p class="contactF">University of Sheffield</p>
+                        </div>
+                        <div class="infoBlock">
+                            <a href="mailto:avalonrov@sheffield.ac.uk"><i class="fas fa-envelope fa-lg"></i></a><p class="contactF">avalonrov@sheffield.ac.uk</p><br />
+                        </div>
+                        <div class="infoBlock">
+                            <a href="tel:+44 07718 047055"><i class="fas fa-phone fa-lg"></i></a><p class="contactF">+44 07718 047055</p>
+                        </div>
+                        
+                      </div>
+                      <div class="col-sm-2">
+                        <p class="subHeader">Follow Us</p>
+                        <p style="color: lightgray; margin-top: 10px;">Stay in the loop or find out more information on our social media.</p>
+                        
+                        <a href="https://www.facebook.com/AvalonROV/"><i class="fab fa-facebook-square fa-2x" style="color:white"></i></a>
+                        <a href="https://github.com/AvalonROV"><i class="fab fa-github-square fa-2x" style="color:white"></i></a>
+                        <a href="https://www.linkedin.com/company/avalon-rov/about/"><i class="fab fa-linkedin fa-2x" style="color:white"></i></a>
+                    
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+            
+        
+          
+    </div>
+    
+    
+
+
+
+</body>
+<script>
+    VANTA.WAVES({
+        el: "#waves",
+  shininess: 20.00,
+  waveHeight: 21.00,
+  waveSpeed: 0.60,
+  zoom: 0.65
+})
+    </script>
+
+</html>
