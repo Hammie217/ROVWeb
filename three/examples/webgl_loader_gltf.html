@@ -16,6 +16,8 @@
 			import { OrbitControls } from './jsm/controls/OrbitControls.js';
 			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 			import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+			import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
+
 			import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
 
 			var container, controls;
@@ -53,14 +55,21 @@
 
 						// use of RoughnessMipmapper is optional
 						var roughnessMipmapper = new RoughnessMipmapper( renderer );
+						var loader = new GLTFLoader();
 
-						var loader = new GLTFLoader().setPath( 'models/' );
-						loader.load( 'ROVTake3.glb', function ( gltf ) {
+						var dracoLoader = new DRACOLoader();
+						dracoLoader.setDecoderPath( './draco/gltf/' );
+						loader.setDRACOLoader( dracoLoader );
+
+
+						loader.load( 'models/ROVTake3.glb', function ( gltf ) {
 
 							gltf.scene.traverse( function ( child ) {
 
 								if ( child.isMesh ) {
-									child.scale.set(3,3,3)
+									//child.scale.set(1)
+									//child.position.z-=0.2;
+									//child.position.y-=0.2;
 									
 
 									roughnessMipmapper.generateMipmaps( child.material );
@@ -70,11 +79,33 @@
 							} );
 
 							scene.add( gltf.scene );
-							child.position=scene.position;
 
 							roughnessMipmapper.dispose();
 
 							render();
+
+						} );
+						loader.load( 'models/ROVTake3ch.glb', function ( gltf ) {
+
+						gltf.scene.traverse( function ( child ) {
+
+							if ( child.isMesh ) {
+								//child.scale.set(1)
+								//child.position.z-=0.2;
+								child.position.y-=0.22;
+								
+
+								roughnessMipmapper.generateMipmaps( child.material );
+
+							}
+
+						} );
+
+						scene.add( gltf.scene );
+
+						roughnessMipmapper.dispose();
+
+						render();
 
 						} );
 
@@ -93,7 +124,7 @@
 
 				controls = new OrbitControls( camera, renderer.domElement );
 				controls.addEventListener( 'change', render ); // use if there is no animation loop
-				controls.minDistance = 2;
+				controls.minDistance = 0;
 				controls.maxDistance = 10
 				controls.target.set( 0, 0, - 0.2 );
 				controls.update();
