@@ -43,7 +43,7 @@ Sky.prototype = Object.create( Mesh.prototype );
 Sky.SkyShader = {
 
 	uniforms: {
-		"luminance": { value: 1 },
+		"luminance": { value: 100 },
 		"turbidity": { value: 2 },
 		"rayleigh": { value: 1 },
 		"mieCoefficient": { value: 0.005 },
